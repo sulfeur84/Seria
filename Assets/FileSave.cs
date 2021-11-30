@@ -14,7 +14,7 @@ namespace Script {
                 SerializableTransform serializableTransform = new SerializableTransform{
                     Position = o.transform.position,
                     Rotation = o.transform.rotation,
-                    Scale = o.transform.localScale
+                    Scale = o.transform.localScale,
                 };
                 SerializableTransforms.Add(serializableTransform);
             }

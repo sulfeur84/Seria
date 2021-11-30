@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Script;
@@ -9,7 +10,13 @@ public class CubeSpawner : MonoBehaviour {
 
     private List<GameObject> _cubeList = new List<GameObject>();
     private string _savedData;
-    string _filePath = Directory.GetCurrentDirectory() + @"\Assets\DataIG\SaveFile.json";
+    private string _filePath;
+
+    public void Awake()
+    {
+       _filePath = Application.dataPath + "/StreamingAssets";
+    }
+
     private void Update() {
         if (Input.GetButton("Jump")) {
             GameObject instantiate = Instantiate(CubePrefab, transform.position, Quaternion.identity);

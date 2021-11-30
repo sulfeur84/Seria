@@ -8,6 +8,7 @@ namespace Script {
         public Vector3 Position;
         public Quaternion Rotation;
         public Vector3 Scale;
+        public Vector3 Velocity;
 
     }
 }
